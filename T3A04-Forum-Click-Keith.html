@@ -1,6 +1,4 @@
-Make All Of These Clickable:<br>
-
-A Text Box: <input id="mytext01" type=text value="spoopy fred"><br>
+T3A04-Forum-Click-Keith <br>
 
 <input type=button value="Password"  onclick="{
 
@@ -8,24 +6,50 @@ A Text Box: <input id="mytext01" type=text value="spoopy fred"><br>
 }">
 
 
-<input type=button value="Password"  onclick="{
+<input type=button value="Text Box"  onclick="{
 
-    document.getElementById('myDiv01').innerHTML += '<input id="myRadio01" type=radio ><br>'
+    document.getElementById('myDiv01').innerHTML += '<input type=mytext01 type=text ><br>'
 }">
 
+<input type=button value="Radio Button"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input type=radio ><br>'
+}">
+
+<input type=button value="Checkbox"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input type=Checkbox ><br>'
+}">
+
+<input type=button value="Submit Button"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input type=submit ><br>'
+}">
+
+<input type=button value="Reset Box"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input type=reset ><br>'
+}">
+
+<input type=button value="Slider"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input type=range value=3 max=10 ><br>'
+}">
+
+<input type=button value="File Box"  onclick="{
+
+    document.getElementById('myDiv01').innerHTML += '<input id=myfile01 type=file ><br>'
+}">
+
+<br>
+
+<textarea rows=5 cols=70 nowrap>wow</textarea><br>
+<select size=1>
+<option>
+<option>meat
+<option>Dairy
+</select>
 
 
 
-
-
-
-
-
- '' }">
-
-
-
-
-
-
-<div id="myDiv01">...</div>
+<div id="myDiv01"></div>
