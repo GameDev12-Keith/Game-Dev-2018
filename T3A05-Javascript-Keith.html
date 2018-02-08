@@ -1,11 +1,14 @@
 If Statements By Keith<br>
 
 
-<input type=button value="if x>6" onclick="{
+x=<input id="mytext01" type=text size=4 value=6><br>
+
+
+<input type=button value="Text if x>6" onclick="{
 myTemp=
-x=8
-if(x>6){myTemp='largerthan6'}
-else{myTemp='lessthan6'}
+x= document.getElementById('mytext01').value
+if(x>6){myTemp='larger than 6'}
+else{myTemp='less than 6'}
 
 document.getElementById('mydiv01').innerHTML=myTemp
 }">
@@ -13,12 +16,14 @@ document.getElementById('mydiv01').innerHTML=myTemp
 
 <div id='mydiv01'></div>
 
+x=<input id="mytext02" type=text size=4 value=6><br>
 
-<input type=button value="If x<6" onclick="{
+
+<input type=button value="Text if x=10" onclick="{
 myTemp=
-x=2
-if(x>6){myTemp='largerthan6'}
-else{myTemp='lessthan6'}
+x= document.getElementById('mytext02').value
+if(x==10){myTemp='Equals 10'}
+else{myTemp='Does Not Equal 10'}
 
 document.getElementById('mydiv02').innerHTML=myTemp
 }">
@@ -27,11 +32,14 @@ document.getElementById('mydiv02').innerHTML=myTemp
 <div id='mydiv02'></div>
 
 
-<input type=button value="x=7" onclick="{
+x=<input id="mytext03" type=text size=4 value=6><br>
+
+
+<input type=button value="Text if x=1 to 100" onclick="{
 myTemp=
-x=7
-if(x==7){myTemp='Equals 7'}
-else{myTemp='Not 7'}
+x= document.getElementById('mytext03').value
+if((x>1)&&(x<100)){myTemp='In Between 1 and 100'}
+else{myTemp='Outside 1 and 100'}
 
 document.getElementById('mydiv03').innerHTML=myTemp
 }">
@@ -39,71 +47,20 @@ document.getElementById('mydiv03').innerHTML=myTemp
 
 <div id='mydiv03'></div>
 
-<input type=button value="x>7" onclick="{
+
+x=<input id="mytext04" type=text size=4 value=6><br>
+
+
+<input type=button value="Text if x=45 or 83" onclick="{
 myTemp=
-x=10
-if(x==7){myTemp='Equals 7'}
-else{myTemp='Not 7'}
+x= document.getElementById('mytext04').value
+if((x==45)||(x==83)){myTemp='45 or 83'}
+else{myTemp='Anything But 45 or 83'}
 
 document.getElementById('mydiv04').innerHTML=myTemp
 }">
 
 
 <div id='mydiv04'></div>
-
-
-<input type=button value="x=1or10" onclick="{
-myTemp=
-x=1
-if((x==1)||(x==10)){myTemp='1 0r 10'}
-else{myTemp='Anything But 1 0r 10'}
-
-document.getElementById('mydiv05').innerHTML=myTemp
-}">
-
-
-<div id='mydiv05'></div>
-
-
-<input type=button value="x=not 1or10" onclick="{
-myTemp=
-x=6
-if((x==1)||(x==10)){myTemp='1 0r 10'}
-else{myTemp='Anything But 1 0r 10'}
-
-document.getElementById('mydiv06').innerHTML=myTemp
-}">
-
-
-<div id='mydiv06'></div>
-
-
-<input type=button value="Greater than 100" onclick="{
-myTemp=
-x=101
-if((x>1)&&(x<100)){myTemp='Between 1and100'}
-else{myTemp='x>100'}
-
-document.getElementById('mydiv07').innerHTML=myTemp
-}">
-
-
-<div id='mydiv07'></div>
-
-
-
-
-<input type=button value="Between 1 and 100" onclick="{
-myTemp=
-x=47
-if((x>1)&&(x<100)){myTemp='Between 1and100'}
-else{myTemp='x>100'}
-
-document.getElementById('mydiv08').innerHTML=myTemp
-}">
-
-
-<div id='mydiv08'></div>
-
 
 
