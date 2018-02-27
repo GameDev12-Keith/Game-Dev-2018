@@ -1,0 +1,15 @@
+<script>
+function myCheckKeys(event){
+   alert(String.fromCharCode(event.keyCode))
+   document.getElementById('mydiv01').innerHTML += 'wow <br>'
+
+
+
+}
+</script>
+
+<body onKeyDown="{myCheckKeys(event)}">
+
+<h2 align=center>Storage And Keydown by Keith</h2>
+
+<div id="mydiv01"></div>
