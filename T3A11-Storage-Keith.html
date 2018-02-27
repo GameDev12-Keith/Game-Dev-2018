@@ -1,9 +1,7 @@
 <script>
 function myCheckKeys(event){
-   alert(String.fromCharCode(event.keyCode))
-   document.getElementById('mydiv01').innerHTML += 'wow <br>'
-
-
+   
+   document.getElementById('mydiv01').innerHTML +=String.fromCharCode(event.keyCode)+ ''
 
 }
 </script>
@@ -11,5 +9,14 @@ function myCheckKeys(event){
 <body onKeyDown="{myCheckKeys(event)}">
 
 <h2 align=center>Storage And Keydown by Keith</h2>
+
+A Floating Point Number <input id="myInput" type=text value=3.14>
+
+
+
+
+
+
+
 
 <div id="mydiv01"></div>
