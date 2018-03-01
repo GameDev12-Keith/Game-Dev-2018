@@ -1,25 +1,94 @@
 <h2 align=center>Pixels by Keith</h2>
-<input type=button value="Right" onclick="{
 
-document.getElementById('myDiv01').style.left= 
-parseInt(document.getElementById('myDiv01').style.left) + 6
-}">
-<input type=button value="left" onclick="{
 
-document.getElementById('myDiv01').style.left= 
-parseInt(document.getElementById('myDiv01').style.left) - 6
-}">
-<input type=button value="up" onclick="{
+<div id="myDiv01" style="position:absolute; left:20px; top:80px;"  >Keith</div><br> 
+
+
+<table width="20%" border="1">
+  <tr>
+    
+<td><input type=button value="up/left" onclick="{
 
 document.getElementById('myDiv01').style.top= 
 parseInt(document.getElementById('myDiv01').style.top) - 6
-}">
-<input type=button value="down" onclick="{
+
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) - 6
+}"></td>
+    
+
+
+
+<td><input type=button value=" up " onclick="{
+
+document.getElementById('myDiv01').style.top= 
+parseInt(document.getElementById('myDiv01').style.top) - 6
+}"></td>
+    
+
+
+<td><input type=button value=" up/right " onclick="{
+
+document.getElementById('myDiv01').style.top= 
+parseInt(document.getElementById('myDiv01').style.top) - 6
+
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) + 6
+}"></td>
+  
+
+  </tr>
+  <tr>
+    
+
+
+<td><input type=button value="left" onclick="{
+
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) - 6
+}"></td>
+    
+
+<td>     </td>
+    
+
+<td><input type=button value="Right" onclick="{
+
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) + 6
+}"></td>
+  </tr>
+  <tr>
+    
+
+<td><input type=button value="down/left" onclick="{
 
 document.getElementById('myDiv01').style.top= 
 parseInt(document.getElementById('myDiv01').style.top) + 6
-}">
 
-<div id="myDiv01" style="position:absolute; left:20px; top:80px;"  >Keith</div><br> 
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) - 6
+}"></td>
+    
+
+<td><input type=button value="down" onclick="{
+
+document.getElementById('myDiv01').style.top= 
+parseInt(document.getElementById('myDiv01').style.top) + 6
+}"></td>
+    
+
+<td><input type=button value="down/right" onclick="{
+
+document.getElementById('myDiv01').style.top= 
+parseInt(document.getElementById('myDiv01').style.top) + 6
+
+
+document.getElementById('myDiv01').style.left= 
+parseInt(document.getElementById('myDiv01').style.left) + 6
+}"></td>
+  
+</tr>
+</table>
 
 
