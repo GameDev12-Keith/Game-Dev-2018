@@ -3,17 +3,17 @@
 //alert( Math.floor(Math.random()*9+1) )
 
 myStuff = new Array()
-myStuff[0] = '1'
-myStuff[1] = '2'
-myStuff[2] = '3'
-myStuff[3] = '4'
-myStuff[4] = '5'
-myStuff[5] = '6'
-myStuff[6] = '7'
-myStuff[7] = '8'
-myStuff[8] = '9'
+myStuff[0] = 'The Names'
+myStuff[1] = 'Recoome'
+myStuff[2] = 'It Rhymes'
+myStuff[3] = 'With Doom'
+myStuff[4] = 'And Youre Gonna Be Hurtin'
+myStuff[5] = 'ALL'
+myStuff[6] = 'TOO'
+myStuff[7] = 'SOON!'
 
-for (myLoop=0; myLoop <= 8; myLoop++){
+
+for (myLoop=0; myLoop <= 7; myLoop++){
    document.getElementById('myDiv01').innerHTML += myStuff[myLoop] + '<br>' 
 }"><br>
 
@@ -37,9 +37,14 @@ myRandomNumber[2] = Math.floor(Math.random()*9+1)
 myRandomNumber[3] = Math.floor(Math.random()*9+1)
 myRandomNumber[4] = Math.floor(Math.random()*9+1)
 myRandomNumber[5] = Math.floor(Math.random()*9+1)
+myRandomNumber[6] = Math.floor(Math.random()*9+1)
+myRandomNumber[7] = Math.floor(Math.random()*9+1)
+myRandomNumber[8] = Math.floor(Math.random()*9+1)
+myRandomNumber[9] = Math.floor(Math.random()*9+1)
+myRandomNumber[10] = Math.floor(Math.random()*9+1)
 
 
-for (myLoop=1; myLoop <= 5; myLoop++){
+for (myLoop=1; myLoop <= document.getElementById('myText01').value; myLoop++){
   document.getElementById('myDiv02').innerHTML += myRandomNumber[myLoop] + '<br>'
 }"><br>
 
