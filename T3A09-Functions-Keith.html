@@ -3,11 +3,11 @@
 <script>
 
 function myGuardian(myX){
-alert('your ' +myX+ ' dirty')
+document.getElementById('myDiv01').innerHTML += 'your ' +myX+ ' dirty<br>'
 }
 
 function FoodsILike(myY){
-alert('I Like ' +myY+ '')
+document.getElementById('myDiv01').innerHTML += 'I Like ' +myY+ '<br>'
 }
 
 
@@ -26,7 +26,7 @@ My Guardian:<input type=button value=Socks onclick="{
 <input type=button value='inline function' onclick="{
      
 (function () {
-alert ('inline works')
+document.getElementById('myDiv01').innerHTML += 'Inline Works!<br>'
 })()
 }"><br>
 
@@ -44,3 +44,5 @@ Foods I Like:<input type=button value=Pizza onclick="{
 <input type=button value='Spaget!' onclick="{
      FoodsILike('Spaget!')
 }">
+
+<div id="myDiv01"></div>
