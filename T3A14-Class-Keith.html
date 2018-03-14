@@ -3,14 +3,14 @@
 <script>
 
 class myAnimal {
-  constructor(passName, passAge) {
+  constructor(passName, passAge, passType) {
        this.myName = passName;
        this.myAge = passAge;
-
+       this.myType = passType;
 }
 
 myShow(){
-   document.getElementById('myDiv01').innerHTML += 'Hello '+ this.myName + '<br>'
+   document.getElementById('myDiv01').innerHTML += 'Name:' + this.myName + ' Age:' + this.myAge + ' Type:' + this.myType + '<br>'
 }
 
 
@@ -21,14 +21,15 @@ myShow(){
 
 <input type=button value="Activate Dog" onclick="{
 
-   myDog = new myAnimal('Snickers',5)
+   myDog = new myAnimal('Oliver','12','Dog')
    myDog.myShow()
 
 }">
 
-<input type=button value="Activate Cat?" onclick="{
+<input type=button value="Activate Cat" onclick="{
 
-
+   myCat = new myAnimal('Gadget','18','Cat')
+   myCat.myShow()
 
 }">
 
