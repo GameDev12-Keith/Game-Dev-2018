@@ -3,26 +3,49 @@
 
 Make These Web page elements clickable<br>
 
-An Image: <img width=100 src="https://vignette.wikia.nocookie.net/gems-of-war/images/b/bc/Troop_Owlbear.png/revision/latest?cb=20160128205026"><br><br>
+<input type=button value="An Image"   onclick="{
 
-A link: <a href="http://www.google.ca">http://www.google.ca</a>><br><br>
+       document.getElementById('myDiv01').innerHTML += '<img src=https://i.imgflip.com/1rqtpl.jpg>'
 
-A Video: <iframe width="560" height="315" src="https://www.youtube.com/embed/8ci2hj7CSHI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><br><br>
+}"><br>
 
-A list: <ol><li>The Name's Recoome!<li>It Rhymes With Doom!<li>And You're Gonna Be Hurtin<li>ALL, TOO, SOON!</ol> <br><br>
+<input type=button value="A List" onclick="
+//alert( Math.floor(Math.random()*9+1) )
 
-A Table:<br>
-<table width="100%" border="1">
-  <tr>
-    <td>1</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>6</td>
-  </tr>
-</table><br><br>
+myStuff = new Array()
+myStuff[0] = '1.The Names Recoome'
+myStuff[1] = '2.It Rhymes With Doom'
+myStuff[2] = '3.And Youre Gonna Be Hurtin'
+myStuff[3] = '4.ALL TOO SOON'
+
+
+
+
+for (myLoop=0; myLoop <= 3; myLoop++){
+   document.getElementById('myDiv02').innerHTML += myStuff[myLoop] + '<br>' 
+}">
+
+<form>
+<input type="button" value="A Link" onclick="window.location.href='https://www.google.ca/'" />
+</form>
+
+
+<input type=button value="A Video"   onclick="{
+
+       document.getElementById('myDiv03').innerHTML += '<embed src=https://www.youtube.com/embed/8ci2hj7CSHI?rel=0&amp;showinfo=0 autostart=false height=100 width=144 />'
+}"><br>
+
+
+<input type=button value="A Table"   onclick="{
+
+       document.getElementById('myDiv04').innerHTML += '<table width=10% border=1><tr><td>uno</td><td>dos</td></tr><tr><td>tres</td><td>quatros</td></tr>'
+
+}"><br>
+
+
+<div id=myDiv01></div>
+<div id=myDiv02></div>
+<div id=myDiv03></div>
+<div id=myDiv04></div>
+<div id=myDiv05></div>
+
