@@ -212,6 +212,10 @@ if(event.keyCode==97){ document.getElementById('move1').style.left = parseInt(do
 
 if(event.keyCode==119){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)-5+'px'} // small 'w' key go up
 
+if(event.keyCode==100){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)+5+'px'}
+
+if(event.keyCode==115){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)+5+'px'}
+
 }">
 
 <script> // This object must be after the body tag
@@ -257,6 +261,7 @@ Click to hide.
 <input type=button value="Fire" onClick="myGunPrep()">
 
 <img id="bullet1" src="https://vignette.wikia.nocookie.net/ninjahattori/images/6/68/Shuriken.gif/revision/latest?cb=20170320055932" style="position:absolute; width:35px; height:35px; left:500px; top:240px; visibility:hidden"/>
+
 
 <!-- ******************** This is the silly little dot the main object hits ************************** -->
 
