@@ -1,0 +1,225 @@
+<! -- T3A01-GAME-TEMPLATE-FRED.HTML -->
+
+<html>
+
+<head>
+
+<title>Level 1</title>
+
+<script>
+
+//Global variables here
+
+myBgPosY =0; // present vertical position
+
+myBgPosX = 0; // present horizonal position
+
+myBgHeight = 402; // height of background image
+
+myBgWidth = 753; // width of background image
+
+myBgSpeedYdown = 1; // speed moving down
+
+myBgSpeedXright = 0; // speed moving right
+
+
+// ******************** Object Detection Starts below ************************** -->
+
+// myHitXY function determines if any object has hit an x, y location. Note it is better to use the myHitOther function
+
+function myHitXY(my1,X,Y){
+
+left1 = parseInt(document.getElementById(my1).style.left)
+
+right1 = left1 + parseInt(document.getElementById(my1).style.width)
+
+top1 = parseInt(document.getElementById(my1).style.top)
+
+bottom1 = top1 + parseInt(document.getElementById(my1).style.height)
+
+if ((left1 <= X ) &&
+
+(right1 >= X ) &&
+
+(top1 <= Y ) &&
+
+(bottom1 >= Y ) ){
+
+return true
+
+}
+
+}
+
+// myHitOther function determines if two obejcts have hit each other.
+
+function myHitOther(my1,my2){
+
+left1 = parseInt(document.getElementById(my1).style.left)
+
+right1 = left1 + parseInt(document.getElementById(my1).style.width)
+
+top1 = parseInt(document.getElementById(my1).style.top)
+
+bottom1 = top1 + parseInt(document.getElementById(my1).style.height)
+
+left2 = parseInt(document.getElementById(my2).style.left)
+
+right2 = left2 + parseInt(document.getElementById(my2).style.width)
+
+top2 = parseInt(document.getElementById(my2).style.top)
+
+bottom2 = top2 + parseInt(document.getElementById(my2).style.height)
+
+if ((right1 >= left2 ) &&
+
+(bottom1 >= top2 ) &&
+
+(left1 <= right2 ) &&
+
+(top1 <= bottom2) ){
+
+return true
+
+}
+
+}
+
+// Group all your detection code here
+
+function checkAll(){
+
+if (myHitOther('move1','move2')) {
+
+document.getElementById("move2").src = "http://images.all-free-download.com/images/graphiclarge/treasure_chest_312091.jpg"
+
+document.getElementById("myButton01").disabled = false
+
+alert('You Found The Treasure!!! Press Next Level To Continue!')
+
+} 
+
+else {
+document.getElementById('myShowDiv3').innerHTML = 'Nothing Here'
+}
+
+if (myHitOther('bullet1','move2')) {
+
+document.getElementById('myShowDiv3').innerHTML = 'The bullet hit move 2'
+
+document.getElementById('bullet1').style.visibility = 'hidden'
+
+document.getElementById('bullet1').style.left = '-200px'
+
+clearInterval(document.myShot)
+
+}
+
+
+
+
+
+}
+
+// ******************** Object Detection finished ************************** -->
+
+</script>
+
+</head>
+
+<!-- ******************** Here the webpage begins ************************** -->
+
+<!-- ******************** onkeypress just for webpages is useless on mobile apps ************************** -->
+
+<body background="https://ak4.picdn.net/shutterstock/videos/1447414/thumb/1.jpg?i10c" style=" position:absolute; width:500px; height:150px; left:0px; top:0px" onkeypress="{
+
+if(event.keyCode==97){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)-200+'px'}
+
+if(event.keyCode==119){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)-200+'px'}
+
+if(event.keyCode==100){ document.getElementById('move1').style.left = parseInt(document.getElementById('move1').style.left)+200+'px'}
+
+if(event.keyCode==115){ document.getElementById('move1').style.top = parseInt(document.getElementById('move1').style.top)+200+'px'}
+
+if(event.keyCode==32){checkAll()}
+}">
+
+<script> // This object must be after the body tag
+
+myBgObject = eval('document.body');
+
+</script>
+
+<h2 align=center style="background-color:yellow"> Treasure Hunt by Keith</h2>
+
+
+<!-- ******************** Following should be all your images ************************** -->
+
+<img id="move2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:600px; top:340px;"/>
+
+<img id="move3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:200px; top:340px;"/>
+
+<img id="move4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:400px; top:340px;"/>
+
+<img id="move5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:1000px; top:340px;"/>
+
+<img id="move6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:800px; top:340px;"/>
+
+<img id="move7" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:600px; top:540px;"/>
+
+<img id="move8" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:200px; top:540px;"/>
+
+<img id="move9" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:400px; top:540px;"/>
+
+<img id="move10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:1000px; top:540px;"/>
+
+<img id="move11" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:800px; top:540px;"/>
+
+<img id="move2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:600px; top:740px;"/>
+
+<img id="move3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:200px; top:740px;"/>
+
+<img id="move4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:400px; top:740px;"/>
+
+<img id="move5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:1000px; top:740px;"/>
+
+<img id="move6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:800px; top:740px;"/>
+
+<img id="move2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:600px; top:140px;"/>
+
+<img id="move3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:200px; top:140px;"/>
+
+<img id="move4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:400px; top:140px;"/>
+
+<img id="move5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:1000px; top:140px;"/>
+
+<img id="move6" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ONSsfoIOugmEjnk9NJrjmkR-4--PueqX0jogv7SZE5JloPGQ" style="position:absolute; width:150px; height:100px; left:800px; top:140px;"/>
+
+<img id="move1" src="http://pngimg.com/uploads/scope/scope_PNG13033.png" style="position:absolute; width:150px; height:150px; left:200px; top:115px" onClick="myGunPrep()">
+
+<!-- ******************** Now all the buttons.
+
+Note: ontouchstart is faster than onclick but only works on touch screens or mobile ************************** -->
+
+
+<input type=button value="Search Chest" onclick="{
+
+checkAll()
+
+}">
+
+<input type=button disabled= "true" id="myButton01" value="Next Level" style="position:absolute; width:150px; height:100px; left:20px; top:740px;" onclick="{
+
+location='https://www.google.ca/?gws_rd=ssl&safe=active&ssui=on'
+
+}">
+
+
+
+
+
+<div id="myShowDiv3" style="width:300px; background-color:yellow"></div>
+<div id="myShowDiv4" style="width:300px; background-color:yellow"></div>
+</body>
+
+</html>
