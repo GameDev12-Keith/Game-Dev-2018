@@ -21203,14 +21203,17 @@ cr.getObjectRefTable = function () { return [
 	cr.behaviors.Turret.prototype.acts.AddTarget,
 	cr.behaviors.Turret.prototype.cnds.OnShoot,
 	cr.behaviors.Bullet.prototype.cnds.CompareTravelled,
-	cr.plugins_.Touch.prototype.cnds.OnDoubleTapGestureObject,
+	cr.plugins_.Touch.prototype.cnds.OnTapGestureObject,
 	cr.plugins_.Touch.prototype.cnds.IsTouchingObject,
 	cr.system_object.prototype.acts.CreateObject,
 	cr.system_object.prototype.exps.round,
 	cr.plugins_.Touch.prototype.exps.X,
 	cr.plugins_.Touch.prototype.exps.Y,
+	cr.plugins_.Touch.prototype.cnds.OnDoubleTapGestureObject,
 	cr.plugins_.Touch.prototype.cnds.OnHoldGestureObject,
 	cr.system_object.prototype.cnds.EveryTick,
 	cr.plugins_.Text.prototype.acts.SetText,
-	cr.plugins_.Sprite.prototype.acts.SetPos
+	cr.plugins_.Button.prototype.cnds.OnClicked,
+	cr.system_object.prototype.acts.RestartLayout,
+	cr.system_object.prototype.acts.SetVar
 ];};
